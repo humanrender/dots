@@ -40,5 +40,7 @@
   (setup-indent 2) ; setup indentation
   (add-hook 'after-change-major-mode-hook (lambda()
     (electric-indent-mode -1)
-    )) ; disable automatic indentation
+  )) ;; disable automatic indentation
+  ;; (global-set-key (kbd "RET") 'newline)
+  (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 )
