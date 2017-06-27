@@ -40,4 +40,5 @@
   )) ;; disable automatic indentation
   ;; (global-set-key (kbd "RET") 'newline)
   (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+  (setq magit-save-repository-buffers nil)
 )
