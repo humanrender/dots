@@ -45,6 +45,7 @@ values."
      git
      osx
      react
+     ruby
      ;; markdown
      ;; org
      ;; (shell :variables
