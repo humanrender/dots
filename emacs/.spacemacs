@@ -46,6 +46,7 @@ values."
      osx
      react
      ruby
+     yaml
      ;; markdown
      ;; org
      ;; (shell :variables
