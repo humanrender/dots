@@ -49,9 +49,10 @@ values."
      yaml
      ;; markdown
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-shell 'shell)
      ;; spell-checking
      syntax-checking
      ;; version-control
@@ -60,7 +61,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(exec-path-from-shell)
+   dotspacemacs-additional-packages 
+   '(
+     exec-path-from-shell
+   )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
