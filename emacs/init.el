@@ -2,6 +2,7 @@
 
 (load-file "~/.emacs.d/melpa.el") ;; melpa configuration
 (load-file "~/.emacs.d/themes.el") ;; load themes
+(load-file "~/.emacs.d/tabs.el") ;; tabs configuration
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
