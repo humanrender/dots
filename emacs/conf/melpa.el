@@ -8,7 +8,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (xclip spacemacs-theme solarized-theme simpleclip multiple-cursors))))
+ '(package-selected-packages
+   (quote
+    (rjsx-mode better-defaults xclip spacemacs-theme solarized-theme simpleclip multiple-cursors))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
