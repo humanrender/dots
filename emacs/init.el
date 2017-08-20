@@ -1,18 +1,6 @@
-(setq package--init-file-ensured 't)
-
-(load-file "~/.emacs.d/melpa.el") ;; melpa configuration
+(setq custom-file "~/.emacs.d/melpa.el")
+(load-file "~/.emacs.d/melpa.el") ;; melpa configuration and custom vars
 (load-file "~/.emacs.d/themes.el") ;; load themes
 (load-file "~/.emacs.d/tabs.el") ;; tabs configuration
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (spacemacs-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(load-file "~/.emacs.d/clipboard.el") ;; clipboard configuration
+(load-file "~/.emacs.d/multiple-cursors.el") ;; multiple-cursors configuration
