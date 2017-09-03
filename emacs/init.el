@@ -12,3 +12,4 @@
 (load-file "~/.emacs.d/conf/clipboard.el") ;; clipboard configuration
 (load-file "~/.emacs.d/conf/better-defaults.el") ;; require better-defaults
 (load-file "~/.emacs.d/conf/multiple-cursors.el") ;; multiple-cursors configuration
+(load-file "~/.emacs.d/conf/flycheck.el") ;; flycheck configuration
