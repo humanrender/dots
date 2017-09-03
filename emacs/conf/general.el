@@ -7,3 +7,4 @@
 ;; Bell
 (setq visible-bell nil)
 (setq ring-bell-function 'ignore)
+(global-linum-mode t)
