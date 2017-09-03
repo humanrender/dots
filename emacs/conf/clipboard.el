@@ -1,2 +1,3 @@
-(require 'xclip)
-(xclip-mode 1)
+(use-package xclip
+  :ensure t
+  :init (xclip-mode 1))
