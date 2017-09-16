@@ -1,3 +1,6 @@
 .DS_Store
 .cache
 elpa/
+emacs/ido.last
+emacs/network-security.data
+emacs/projectile*
