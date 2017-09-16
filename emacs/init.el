@@ -1,10 +1,3 @@
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (load-file "~/.emacs.d/conf/general.el") ;; general configuration
 (load-file "~/.emacs.d/conf/melpa.el") ;; melpa configuration and custom vars
 (load-file "~/.emacs.d/conf/langs.el") ;; Language modes
@@ -13,3 +6,6 @@
 (load-file "~/.emacs.d/conf/better-defaults.el") ;; require better-defaults
 (load-file "~/.emacs.d/conf/multiple-cursors.el") ;; multiple-cursors configuration
 (load-file "~/.emacs.d/conf/flycheck.el") ;; flycheck configuration
+(load-file "~/.emacs.d/conf/projectile.el") ;; projectile configuration
+(load-file "~/.emacs.d/conf/helm.el") ;; helm configuration
+(load-file "~/.emacs.d/conf/git.el") ;; git packages
