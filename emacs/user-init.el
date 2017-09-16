@@ -1,5 +1,0 @@
-(defun dotspacemacs/user-init ()
-  (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
-  (setq-default git-magit-status-fullscreen t)
-)
