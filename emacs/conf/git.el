@@ -1,2 +1,3 @@
 (use-package magit
-   :ensure t)
+  :ensure t
+  :bind ("C-x g s" . magit-status))
