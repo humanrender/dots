@@ -4,26 +4,19 @@
 
 (use-package helm
   :ensure t
-  :bind (("M-a" . helm-M-x)
+  :bind (("M-x" . helm-M-x)
          ("C-x C-f" . helm-find-files)
          ("C-x f" . helm-recentf)
-         ("C-SPC" . helm-dabbrev)
          ("M-y" . helm-show-kill-ring)
+         ("C-x C-b" . helm-buffers-list)
          ("C-x b" . helm-buffers-list))
-  :bind (:map helm-map
-	      ("M-i" . helm-previous-line)
-	      ("M-k" . helm-next-line)
-	      ("M-I" . helm-previous-page)
-	      ("M-K" . helm-next-page)
-	      ("M-h" . helm-beginning-of-buffer)
-	      ("M-H" . helm-end-of-buffer))
   :config (progn
 	    (setq helm-buffers-fuzzy-matching t)
             (helm-mode 1)))
 
 (use-package helm-descbinds
   :ensure t
-  :bind ("C-h b" . helm-descbinds))
+  :bind ("C-h d" . helm-descbinds))
 
 (use-package helm-files
   :bind (:map helm-find-files-map
@@ -36,8 +29,7 @@
 
 (use-package helm-swoop
   :ensure t
-  :bind (("M-m" . helm-swoop)
-	 ("M-M" . helm-swoop-back-to-last-point))
+  :bind ("M-m" . helm-swoop)
   :init
   (bind-key "M-m" 'helm-swoop-from-isearch isearch-mode-map))
 
@@ -45,8 +37,11 @@
   :ensure helm-ag
   :bind ("M-p" . helm-projectile-ag)
   :commands (helm-ag helm-projectile-ag)
-  :init (setq helm-ag-insert-at-point 'symbol
-	      helm-ag-command-option "--path-to-ignore ~/.agignore"))
+  :init
+  (setq helm-ag-insert-at-point 'symbol
+	      helm-ag-command-option "--path-to-ignore ~/.agignore")
+  (custom-set-variables
+   '(helm-follow-mode-persistent t)))
 
 (use-package helm-projectile
   :ensure t
