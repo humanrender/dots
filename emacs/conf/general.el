@@ -4,6 +4,7 @@
 (delete-selection-mode 1) ;; Delete selection when writing text
 (setq-default indent-tabs-mode nil) ;; Tabs or spaces
 (setq-default tab-width 2) ;; Default tab size
+(xterm-mouse-mode)
 ;; Bell
 (setq visible-bell nil)
 (setq ring-bell-function 'ignore)
