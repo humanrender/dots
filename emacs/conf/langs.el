@@ -9,3 +9,11 @@
   (setq web-mode-attr-indent-offset 2)
   (setq web-mode-content-types-alist
         '(("jsx" . "\\.js[x]?\\'"))))
+
+(use-package scss-mode
+  :ensure t
+  :config
+  (setq css-indent-offset 2))
+
+(use-package json-mode
+  :ensure t)
