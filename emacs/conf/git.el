@@ -1,3 +1,5 @@
 (use-package magit
   :ensure t
-  :bind ("C-x g s" . magit-status))
+  :bind ("C-c g s" . magit-status)
+  :config
+  (setq magit-save-repository-buffers nil))

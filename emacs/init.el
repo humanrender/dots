@@ -9,3 +9,4 @@
 (load-file "~/.emacs.d/conf/projectile.el") ;; projectile configuration
 (load-file "~/.emacs.d/conf/helm.el") ;; helm configuration
 (load-file "~/.emacs.d/conf/git.el") ;; git packages
+(load-file "~/.emacs.d/conf/mouse.el") ;; mouse conf for xterm

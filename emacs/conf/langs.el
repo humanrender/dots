@@ -16,4 +16,9 @@
   (setq css-indent-offset 2))
 
 (use-package json-mode
+  :ensure t
+  :config
+  (setq js-indent-level 2))
+
+(use-package yaml-mode
   :ensure t)
