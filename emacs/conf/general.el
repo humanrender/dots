@@ -8,3 +8,4 @@
 (setq visible-bell nil)
 (setq ring-bell-function 'ignore)
 (global-linum-mode t)
+(add-to-list 'default-frame-alist '(font . "Inconsolata 20" ))
