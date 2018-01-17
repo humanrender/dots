@@ -26,7 +26,7 @@
  '(helm-follow-mode-persistent t)
  '(package-selected-packages
    (quote
-    (indium magit helm-ag helm-swoop helm-descbinds helm-core helm helm-projectile projectile exec-path-from-shell flycheck multiple-cursors :spacemacs-theme xclip web-mode use-package spacemacs-theme better-defaults))))
+    (multi-term indium magit helm-ag helm-swoop helm-descbinds helm-core helm helm-projectile projectile exec-path-from-shell flycheck multiple-cursors :spacemacs-theme xclip web-mode use-package spacemacs-theme better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
