@@ -12,6 +12,7 @@
             (lambda ()
               (setq term-buffer-maximum-size 10000)
               (define-key term-raw-map (kbd "C-y") 'term-paste)
+              (linum-mode 0)
               ))
   (add-hook 'term-mode-hook 'multi-term-face-mode)
   )
