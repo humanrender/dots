@@ -1,3 +1,5 @@
+(load-file "~/.emacs.d/lib/enable-minor-mode.el") ;; general configuration
+
 (load-file "~/.emacs.d/conf/general.el") ;; general configuration
 (load-file "~/.emacs.d/conf/melpa.el") ;; melpa configuration and custom vars
 (load-file "~/.emacs.d/conf/langs.el") ;; Language modes
@@ -12,4 +14,5 @@
 (load-file "~/.emacs.d/conf/mouse.el") ;; mouse conf for xterm
 (load-file "~/.emacs.d/conf/indium.el") ;; js debugging
 (load-file "~/.emacs.d/conf/multi-term.el") ;; terminals inside emacs
+;; (load-file "~/.emacs.d/conf/prettier.el") ;; terminals inside emacs
 
