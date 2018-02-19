@@ -10,9 +10,13 @@
          ("M-y" . helm-show-kill-ring)
          ("C-x C-b" . helm-buffers-list)
          ("C-x b" . helm-buffers-list))
-  :config (progn
-	    (setq helm-buffers-fuzzy-matching t)
-            (helm-mode 1)))
+  :config
+  (progn
+    (setq helm-buffers-fuzzy-matching t)
+    (setq helm-full-frame t)
+    (helm-mode 1)
+    )
+  )
 
 (use-package helm-descbinds
   :ensure t
