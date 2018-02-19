@@ -4,12 +4,9 @@
 (setq mc/cmds-to-run-for-all
       '(
         indent-for-tab-command
-        keyboard-escape-quit
         ))
 
 (setq mc/cmds-to-run-once
       '(
-        complete-symbol
-        end-of-buffer
-        mc/mark-prev-like-this
+        term-send-raw
         ))
