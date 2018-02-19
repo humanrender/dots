@@ -14,5 +14,5 @@
 (load-file "~/.emacs.d/conf/mouse.el") ;; mouse conf for xterm
 (load-file "~/.emacs.d/conf/indium.el") ;; js debugging
 (load-file "~/.emacs.d/conf/multi-term.el") ;; terminals inside emacs
-;; (load-file "~/.emacs.d/conf/prettier.el") ;; terminals inside emacs
+(load-file "~/.emacs.d/conf/prettier.el") ;; terminals inside emacs
 
