@@ -4,9 +4,19 @@
 (setq mc/cmds-to-run-for-all
       '(
         indent-for-tab-command
+        sgml-slash
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        handle-switch-frame
+        helm-show-kill-ring
+        keyboard-escape-quit
+        mark-whole-buffer
+        mouse-set-secondary
+        previous-buffer
+        term-send-down
+        term-send-left
         term-send-raw
+        xref-pop-marker-stack
         ))
