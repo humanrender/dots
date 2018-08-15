@@ -28,3 +28,6 @@
 
 (global-set-key (kbd "<mouse-4>") 'alternating-scroll-down-line)
 (global-set-key (kbd "<mouse-5>") 'alternating-scroll-up-line)
+
+(use-package better-defaults
+  :ensure t)
