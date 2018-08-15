@@ -6,7 +6,7 @@
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
- '(package-selected-packages (quote (use-package))))
+ '(package-selected-packages (quote (smartparens use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -28,25 +28,20 @@
 (eval-when-compile
   (require 'use-package))
 
-(when (string= system-type "darwin")       
-  (setq dired-use-ls-dired nil)) ;; dired in macOS
-(setq inhibit-startup-screen t) ;; No split screen on startup
-(delete-selection-mode 1) ;; Delete selection when writing text
-(setq-default indent-tabs-mode nil) ;; Tabs or spaces
-(setq-default tab-width 2) ;; Default tab size
-(setq visible-bell nil) ;; No bell
-(setq ring-bell-function 'ignore) ;; No bell!
-(global-linum-mode t) ;; line numbers
-(add-to-list 'default-frame-alist '(font . "Inconsolata 20" )) ;; Font size
+(load "~/.emacs.d/files/general")
 
 (use-package spacemacs-theme
-  :ensure t
-  :defer t
-  :init (load-theme 'spacemacs-dark t))
+	     :ensure t
+	     :defer t
+	     :init (load-theme 'spacemacs-dark t))
 
 (use-package smart-mode-line
-  :ensure t
-  :config
-  (setq sml/theme 'dark)
-  (sml/setup)
- )
+	     :ensure t
+	     :config
+	     (setq sml/theme 'dark)
+	     (sml/setup))
+
+(use-package smartparens
+	     :ensure t
+	     :config
+	     (require 'smartparens-config))
