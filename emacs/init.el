@@ -6,9 +6,7 @@
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
- '(package-selected-packages
-   (quote
-    (auto-complete json-mode web-mode smartparens use-package))))
+ '(package-selected-packages (quote (json-mode web-mode smartparens use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,40 +31,32 @@
 (load "~/.emacs.d/files/general")
 
 (use-package spacemacs-theme
-	:ensure t
-	:defer t
-	:init (load-theme 'spacemacs-dark t))
+	     :ensure t
+	     :defer t
+	     :init (load-theme 'spacemacs-dark t))
 
 (use-package smart-mode-line
-	:ensure t
-	:config
-	(setq sml/theme 'dark)
-	(sml/setup))
+	     :ensure t
+	     :config
+	     (setq sml/theme 'dark)
+	     (sml/setup))
 
 (use-package web-mode
-	:ensure t
-	:mode ("\\.[jt]s[x]?\\'" . web-mode)
-	:config
-	(setq web-mode-markup-indent-offset 2)
-	(setq web-mode-css-indent-offset 2)
-	(setq web-mode-code-indent-offset 2)
-	(setq web-mode-attr-indent-offset 2)
-	(setq web-mode-content-types-alist
-		    '(("jsx" . "\\.[jt]s[x]?\\'"))))
+	     :ensure t
+	     :mode ("\\.[jt]s[x]?\\'" . web-mode)
+	     :config
+	     (setq web-mode-markup-indent-offset 2)
+	     (setq web-mode-css-indent-offset 2)
+	     (setq web-mode-code-indent-offset 2)
+	     (setq web-mode-attr-indent-offset 2)
+	     (setq web-mode-content-types-alist
+		   '(("jsx" . "\\.[jt]s[x]?\\'"))))
 
 (use-package json-mode
-	:ensure t
-	:config
-	(setq js-indent-level 2))
+	     :ensure t
+	     :config
+	     (setq js-indent-level 2))
 
 (use-package smartparens
-	:ensure t
-	:hook (web-mode . smartparens-mode))
-
-(use-package auto-complete
-  :ensure t
-  :config
-  (ac-config-default))
-
-(use-package popup
-  :ensure t)
+	     :ensure t
+	     :hook (web-mode . smartparens-mode))
