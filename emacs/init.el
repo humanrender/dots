@@ -43,14 +43,14 @@
 
 (use-package web-mode
 	     :ensure t
-	     :mode ("\\.[jt]s[x]?\\'" . web-mode)
+	     :mode ("\\.js[x]?\\'" . web-mode)
 	     :config
 	     (setq web-mode-markup-indent-offset 2)
 	     (setq web-mode-css-indent-offset 2)
 	     (setq web-mode-code-indent-offset 2)
 	     (setq web-mode-attr-indent-offset 2)
 	     (setq web-mode-content-types-alist
-		   '(("jsx" . "\\.[jt]s[x]?\\'"))))
+		   '(("jsx" . "\\.js[x]?\\'"))))
 
 (use-package json-mode
 	     :ensure t
@@ -60,3 +60,22 @@
 (use-package smartparens
 	     :ensure t
 	     :hook (web-mode . smartparens-mode))
+
+(use-package typescript
+  :mode ("\\.ts[x]?\\'" . typescript-mode)
+  :ensure t)
+
+(use-package company
+  :ensure t)
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+(use-package tide
+  :ensure t
+  :after (typescript company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode))
+  :config
+  (setq typescript-indent-level 2))
