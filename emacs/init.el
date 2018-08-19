@@ -93,3 +93,20 @@
   :hook
   ((web-mode . prettier-js-mode)
    (typescript-mode . prettier-js-mode)))
+
+(use-package projectile
+  :ensure t
+  :bind
+  (("C-x p s" . projectile-switch-open-project)
+	 ("C-x p" . projectile-switch-project)
+   ("M-t" . projectile-find-file))
+  :config
+  (projectile-global-mode)
+  (setq projectile-project-root-files '("package.json"))
+  (setq projectile-project-root-files-bottom-up '("package.json"))
+  (projectile-register-project-type 'npm '("package.json")
+                                    :compilation-dir "./"
+                                    :compile "yarn dist"
+                                    :test "yarn test"
+                                    :run "yarn serve:dev"
+                                    :test-suffix "Test"))
