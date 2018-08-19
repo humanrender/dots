@@ -31,42 +31,44 @@
 (load "~/.emacs.d/files/general")
 
 (use-package spacemacs-theme
-	     :ensure t
-	     :defer t
-	     :init (load-theme 'spacemacs-dark t))
+	:ensure t
+	:defer t
+	:init (load-theme 'spacemacs-dark t))
 
 (use-package smart-mode-line
-	     :ensure t
-	     :config
-	     (setq sml/theme 'dark)
-	     (sml/setup))
+	:ensure t
+	:config
+	(setq sml/theme 'dark)
+	(sml/setup))
 
 (use-package web-mode
-	     :ensure t
-	     :mode ("\\.js[x]?\\'" . web-mode)
-	     :config
-	     (setq web-mode-markup-indent-offset 2)
-	     (setq web-mode-css-indent-offset 2)
-	     (setq web-mode-code-indent-offset 2)
-	     (setq web-mode-attr-indent-offset 2)
-	     (setq web-mode-content-types-alist
-		   '(("jsx" . "\\.js[x]?\\'"))))
+	:ensure t
+	:mode ("\\.js[x]?\\'" . web-mode)
+	:config
+	(setq web-mode-markup-indent-offset 2)
+	(setq web-mode-css-indent-offset 2)
+	(setq web-mode-code-indent-offset 2)
+	(setq web-mode-attr-indent-offset 2)
+	(setq web-mode-content-types-alist
+		    '(("jsx" . "\\.js[x]?\\'"))))
 
 (use-package json-mode
-	     :ensure t
-	     :config
-	     (setq js-indent-level 2))
+	:ensure t
+	:config
+	(setq js-indent-level 2))
 
 (use-package smartparens
-	     :ensure t
-	     :hook (web-mode . smartparens-mode))
+	:ensure t
+	:hook (web-mode . smartparens-mode))
 
 (use-package typescript
   :mode ("\\.ts[x]?\\'" . typescript-mode)
   :ensure t)
 
 (use-package company
-  :ensure t)
+  :ensure t
+  :config
+  (global-company-mode))
 
 (use-package flycheck
   :ensure t
@@ -79,3 +81,15 @@
          (typescript-mode . tide-hl-identifier-mode))
   :config
   (setq typescript-indent-level 2))
+
+(use-package add-node-modules-path
+  :ensure t
+  :hook
+  ((web-mode . add-node-modules-path)
+   (typescript-mode . add-node-modules-path)))
+
+(use-package prettier-js
+  :ensure t
+  :hook
+  ((web-mode . prettier-js-mode)
+   (typescript-mode . prettier-js-mode)))
