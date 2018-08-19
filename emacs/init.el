@@ -6,7 +6,7 @@
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
- '(package-selected-packages (quote (json-mode web-mode smartparens use-package))))
+ '(package-selected-packages (quote (ag json-mode web-mode smartparens use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -99,7 +99,8 @@
   :bind
   (("C-x p s" . projectile-switch-open-project)
 	 ("C-x p" . projectile-switch-project)
-   ("M-t" . projectile-find-file))
+   ("M-t" . projectile-find-file)
+   ("M-p" . projectile-ag))
   :config
   (projectile-global-mode)
   (setq projectile-project-root-files '("package.json"))
@@ -110,3 +111,12 @@
                                     :test "yarn test"
                                     :run "yarn serve:dev"
                                     :test-suffix "Test"))
+
+(use-package ag
+  :ensure t
+  :bind
+  :config
+  (setq ag-highlight-search t))
+
+(use-package which-key
+  :ensure t)
