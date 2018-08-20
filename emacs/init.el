@@ -114,9 +114,10 @@
 
 (use-package ag
   :ensure t
-  :bind
   :config
   (setq ag-highlight-search t))
 
 (use-package which-key
-  :ensure t)
+  :ensure t
+  :config
+  (which-key-mode))
