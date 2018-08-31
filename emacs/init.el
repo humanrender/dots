@@ -6,7 +6,9 @@
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
- '(package-selected-packages (quote (ag json-mode web-mode smartparens use-package))))
+ '(package-selected-packages
+   (quote
+    (org-mode ag json-mode web-mode smartparens use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
