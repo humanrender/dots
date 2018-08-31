@@ -61,7 +61,10 @@
 
 (use-package smartparens
 	:ensure t
-	:hook (web-mode . smartparens-mode))
+	:hook (
+         (web-mode . smartparens-mode)
+         (typescript-mode . smartparens-mode))
+  )
 
 (use-package typescript
   :mode ("\\.ts[x]?\\'" . typescript-mode)
@@ -105,7 +108,7 @@
    ("M-p" . projectile-ag))
   :config
   (projectile-global-mode)
-  (setq projectile-project-root-files '("package.json"))
+  (setq projectile-project-root-files '("package.json" ".git"))
   (setq projectile-project-root-files-bottom-up '("package.json"))
   (projectile-register-project-type 'npm '("package.json")
                                     :compilation-dir "./"
