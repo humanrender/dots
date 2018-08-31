@@ -121,3 +121,6 @@
   :ensure t
   :config
   (which-key-mode))
+
+(use-package org
+  :ensure t)
