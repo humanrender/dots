@@ -8,7 +8,7 @@
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(package-selected-packages
    (quote
-    (org-mode ag json-mode web-mode smartparens use-package))))
+    (org-sticky-header org-bullets ag json-mode web-mode smartparens use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -65,6 +65,12 @@
          (web-mode . smartparens-mode)
          (typescript-mode . smartparens-mode))
   )
+
+(use-package scss-mode
+	:ensure t
+	:config
+	(setq scss-indent-level 2)
+  (setq css-indent-offset 2))
 
 (use-package typescript
   :mode ("\\.ts[x]?\\'" . typescript-mode)
@@ -129,3 +135,54 @@
 
 (use-package org
   :ensure t)
+
+(use-package org-bullets
+  :ensure t
+  :after (org)
+  :hook (org-mode . (lambda () (org-bullets-mode 1)))
+  :config
+  (setq org-bullets-bullet-list '(;;; Large
+    "◉"
+    "○"
+    "●"
+    "◎"
+    "◈"
+    "◇"
+    "◆"
+    )))
+
+(use-package org-sticky-header
+  :ensure t
+  :after (org)
+  :hook (org-mode . org-sticky-header-mode)
+  )
+
+(defun multi-term-face-mode ()
+  "Change font for multi-term items."
+  (interactive)
+  (setq buffer-face-mode-face '(:family "Inconsolata" :height 150))
+  (buffer-face-mode))
+
+(use-package multi-term
+  :ensure t
+  :config
+  (setq multi-term-program "/bin/zsh")
+  (add-hook 'term-mode-hook
+            (lambda ()
+              (setq term-buffer-maximum-size 10000)
+              (define-key term-raw-map (kbd "C-y") 'term-paste)
+              (linum-mode 0)
+              ))
+  (add-hook 'term-mode-hook 'multi-term-face-mode)
+  )
+
+(use-package multiple-cursors
+  :ensure t
+  :init
+  (global-unset-key (kbd "M-<down-mouse-1>"))
+  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+  :bind (
+    ("M-<down>" . mc/mark-next-like-this)
+    ("M-<up>" . mc/mark-previous-like-this)
+  )
+)
